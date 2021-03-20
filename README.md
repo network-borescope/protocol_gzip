@@ -6,12 +6,7 @@ gcc -o main protocol_pre_processor.c -lz
 
 ## Deflate Functions
 
-### EXTERN int ZEXPORT deflateInit2 OF((z_streamp strm,
-                                     int  level,
-                                     int  method,
-                                     int  windowBits,
-                                     int  memLevel,
-                                     int  strategy));
+### EXTERN int ZEXPORT deflateInit2 OF((z_streamp strm,int  level,int  method,int  windowBits,int  memLevel,int  strategy));
 
 The level parameter specifies the compression level must be Z_DEFAULT_COMPRESSION, or
 between 0 and 9:1 gives best speed, 9 gives best compression, 0 gives no compression 
