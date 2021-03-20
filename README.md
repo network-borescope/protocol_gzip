@@ -2,7 +2,7 @@
 
 ## Compile
 
-gcc -o main protocol_pre_processor.c -lz
+gcc -o main protocol_gzip.c -lz
 
 ## Deflate Functions
 
