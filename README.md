@@ -105,3 +105,15 @@ All dynamically allocated data structures for this stream are freed. This functi
 discards any unprocessed input and does not flush any pending output.
 inflateEnd returns Z_OK if success, or Z_STREAM_ERROR if the stream state was
 inconsistent. 
+
+## Returned Values of Deflate and Inflate Functions
+
+0 -> Z_OK
+1 -> STREAM_END
+2 -> Z_NEED_DICT
+(-1) -> Z_ERRNO
+(-2) -> Z_STREAM_ERROR
+(-3) -> Z_DATA_ERROR
+(-4) -> Z_MEM_ERROR
+(-5) -> Z_BUF_ERROR
+(-6) -> Z_VERSION_ERROR
