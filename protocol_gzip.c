@@ -88,8 +88,11 @@ int main() {
 	char buffer_out2[BUFSIZE];
 
 	char aux[BUFSIZE];
+	char *buffer_end = buffer_in;
 	while(fgets(aux, BUFSIZE, stdin)) {
-		strcat(buffer_in, aux);
+        while(*buffer_end != '\0') buffer_end++;
+		
+        strcat(buffer_end, aux);
 	}
 
 	compress_protocol_data(buffer_in, BUFSIZE, buffer_out, BUFSIZE);
